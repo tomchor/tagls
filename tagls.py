@@ -15,10 +15,6 @@ parser.add_argument('-u', '--untagged', dest='untagged', default=False,
 
 args = parser.parse_args()
 
-<<<<<<< HEAD
-if args.locations==None:
-    locations='.'
-=======
 if not args.locations:
     args.locations = ['.']
 
@@ -41,7 +37,6 @@ def get_entries(places):
                     continue
                 entries.append(os.path.join(dirname, filename))
     return entries
->>>>>>> a61eaa079a88f20c69f1c5a89b8ce52cddb397f5
 
 
 def get_tagString(names):
@@ -61,5 +56,6 @@ def parse_tags(string):
 entries = get_entries(args.locations)
 tagstrings = get_tagString(entries)
 print(tagstrings)
+
 
 
