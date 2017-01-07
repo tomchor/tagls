@@ -9,7 +9,8 @@ parser.add_argument('-u', '--untagged', dest='untagged', default=False,
 
 args = parser.parse_args()
 
-
+if args.locations==None:
+    locations='.'
 
 def get_entries(userstring):
     return
