@@ -22,9 +22,9 @@ if not args.locations:
     args.locations = ['.']
 
 if args.ext:
-    rexp = r"\[([A-Za-z0-9_,;"+args.sep+"]+)\]\."+args.ext
+    rexp = r"\[([A-Za-z0-9,;_\-|"+args.sep+"]+)\]\."+args.ext
 else:
-    rexp = r"\[([A-Za-z0-9_,;"+args.sep+"]+)\]"
+    rexp = r"\[([A-Za-z0-9,;_\-|"+args.sep+"]+)\]"
 
 
 def get_entries(places):
